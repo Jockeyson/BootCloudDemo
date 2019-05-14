@@ -1,0 +1,27 @@
+server:
+  port: 7100
+spring:
+  application:
+    name: DemoConfigServer
+  cloud:
+    config:
+      git:
+        uri: https://github.com/Jockeyson/SpringCloudConfig.git
+        search-path: /**
+      label: master
+      server:
+        git:
+          username:
+          password:
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:7000/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+

@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      dicorvery:
+        enabled: true
+        service-id: DemoConfigServer
+      label: master
+      profile: dev
+      uri: http://localhost:7100/
+#SpringBoot 1.5.X 以上默认开通了安全认证，如果不关闭会要求权限
+#management:
+  #security:
+    #enabled:

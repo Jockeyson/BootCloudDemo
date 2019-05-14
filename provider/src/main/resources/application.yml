@@ -1,0 +1,18 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: eureka-provider
+  cloud:
+    config:
+      retry:
+        max-attempts: 6
+        multiplier: 1.1
+        initial-interval: 1000
+        .max-interval: 2000
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:7000/eureka
